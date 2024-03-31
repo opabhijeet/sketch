@@ -55,4 +55,10 @@ container.addEventListener("mouseup", (e)=>{
         active=false;
     }
 });
+container.addEventListener("mouseleave",(e)=>{
+    if(active){
+        container.removeEventListener("mouseover", color);  //end coloring when mouse leaves the container
+        active=false;
+    }
+});
 container.addEventListener("click", e => e.target.style.backgroundColor = "white"); //reset the box
