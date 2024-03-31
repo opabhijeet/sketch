@@ -45,6 +45,7 @@ function color(e){
 let active = false;
 container.addEventListener("mousedown", (e)=>{ 
     if(e.button === 0){
+        color(e);   //color current box
         container.addEventListener("mouseover", color);  //start coloring on mouse-down
         active = true;
     }
